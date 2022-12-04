@@ -91,6 +91,8 @@ func main() {
 			// when Pod gets into BackOff state
 			fmt.Printf("\nBackOff PodEvent:\n%+v\n", e)
 
+		// case	"NetworkNotReady":
+			// this leads to "FailedCreatePodSandBox", containerd issue
 		case "FailedCreatePodSandBox":
 			// when Pod fails due to containerd issue
 			counter += 1
