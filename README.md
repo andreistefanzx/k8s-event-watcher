@@ -1,8 +1,13 @@
 # k8s-event-watcher
 
 ```
-# run script
+# download packages
 go mod init
 go mod tidy
-go run main.go
+
+# watch events across all namespaces in dry-run mode
+go run main.go --dry-run
+
+# watch events across a specific namespace in dry-run mode
+go run main.go --dry-run --namespace "default"
 ```
